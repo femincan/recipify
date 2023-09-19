@@ -1,1 +1,1 @@
-# react-template
+# React + Vite + TypeScript + Eslint (Airbnb) + Prettier
