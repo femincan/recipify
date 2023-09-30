@@ -4,7 +4,9 @@
   "endOfLine": "auto",
   "plugins": [
     "prettier-plugin-tailwindcss",
-    "prettier-plugin-organize-imports"
+    "@trivago/prettier-plugin-sort-imports"
   ],
-  "organizeImportsSkipDestructiveCodeActions": true
+  "importOrder": ["^@src/(.*)$", "^[./]"],
+  "importOrderSortSpecifiers": true,
+  "importOrderCaseInsensitive": true
 }
