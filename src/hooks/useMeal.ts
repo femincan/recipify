@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { MealData } from '@src/types';
+import { MealData } from '@src/index.types';
 
 const getMealsByQuery = async (searchQuery: string, signal: AbortSignal) => {
   const result = await fetch(
