@@ -6,7 +6,7 @@ export const Logo = () => (
     <img
       src={ForkKnifePlate}
       alt='Fork, knife, and plate emoji'
-      className='h-24 w-24 sm:h-28 sm:w-28 md:h-32 md:w-32'
+      className='h-24 w-24 drop-shadow-xl sm:h-28 sm:w-28 md:h-32 md:w-32'
     />
   </div>
 );
