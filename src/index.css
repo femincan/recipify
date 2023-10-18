@@ -8,4 +8,8 @@
   #root {
     @apply h-full min-h-screen w-screen max-w-full;
   }
+
+  html {
+    @apply bg-gradient-to-tl from-rose-300 to-violet-300 bg-cover bg-fixed bg-center bg-no-repeat;
+  }
 }
