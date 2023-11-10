@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
-import { MealData } from '@src/index.types';
+import { MealApiResponse } from '@src/index.types';
+import { normalizeMealData } from '@src/lib';
 
 const getMealsByQuery = async (searchQuery: string, signal: AbortSignal) => {
   const result = await fetch(
@@ -9,9 +10,13 @@ const getMealsByQuery = async (searchQuery: string, signal: AbortSignal) => {
 
   if (!result.ok) throw new Error('An error occured during the request!');
 
-  const data = await result.json();
+  const data: MealApiResponse = await result.json();
 
-  return data as MealData;
+  if (data.meals) {
+    return data.meals.map((meal) => normalizeMealData(meal));
+  }
+
+  return undefined;
 };
 
 export const useMeal = (searchQuery: string) => {
