@@ -1,7 +1,9 @@
-import { Ingredients, MealApiData, MealData } from '@src/index.types';
+import { MealApiData, MealData } from '@src/index.types';
 
-const normalizeIngredients = (mealApiData: MealApiData): Ingredients => {
-  const ingredients: Ingredients = [];
+const normalizeIngredients = (
+  mealApiData: MealApiData,
+): MealData['ingredients'] => {
+  const ingredients: MealData['ingredients'] = [];
 
   for (let i = 1; i <= 20; i += 1) {
     type MealApiDataKey = keyof MealApiData;
@@ -13,7 +15,7 @@ const normalizeIngredients = (mealApiData: MealApiData): Ingredients => {
       break;
     }
 
-    ingredients.push({ [ingredient]: measure.trim() });
+    ingredients.push(`${measure.trim()} ${ingredient}`);
   }
 
   return ingredients;

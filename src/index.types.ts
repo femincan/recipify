@@ -53,8 +53,6 @@ export type MealApiResponse = {
   meals: MealApiData[] | null;
 };
 
-export type Ingredients = Record<string, string>[];
-
 export type MealData = {
   id: string;
   name: string;
@@ -62,5 +60,5 @@ export type MealData = {
   area: string;
   instructions: string;
   thumb: string;
-  ingredients: Ingredients;
+  ingredients: string[];
 };
