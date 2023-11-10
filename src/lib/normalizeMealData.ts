@@ -13,7 +13,7 @@ const normalizeIngredients = (mealApiData: MealApiData): Ingredients => {
       break;
     }
 
-    ingredients.push({ [ingredient]: measure });
+    ingredients.push({ [ingredient]: measure.trim() });
   }
 
   return ingredients;
