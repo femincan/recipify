@@ -4,9 +4,9 @@ import { MealData } from '@src/index.types';
 import { MealCard } from './MealCard';
 import { MealModal } from './MealModal';
 
-type MealsProps = { meals: MealData[] | undefined };
+type MealListProps = { meals: MealData[] | undefined };
 
-export const MealList = ({ meals }: MealsProps) => {
+export const MealList = ({ meals }: MealListProps) => {
   const [currentMeal, setCurrentMeal] = useState<MealData | null>(null);
   const modalRef = useRef<HTMLDialogElement>(null);
 
