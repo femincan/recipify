@@ -13,6 +13,14 @@ export const MealList = ({ meals }: MealsProps) => {
   const showModal = (mealData: MealData) => {
     setCurrentMeal(mealData);
 
+    if (modalRef.current) {
+      const scrollBox = modalRef.current.querySelector('#scroll-box');
+
+      if (scrollBox) {
+        scrollBox.scrollTop = 0;
+      }
+    }
+
     setTimeout(() => modalRef.current?.showModal());
   };
 

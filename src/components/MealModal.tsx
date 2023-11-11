@@ -18,7 +18,7 @@ export const MealModal = ({
           ✕
         </button>
       </form>
-      <div className='max-h-full overflow-y-auto px-8 py-10'>
+      <div id='scroll-box' className='max-h-full overflow-y-auto px-8 py-10'>
         <div className='flex flex-col items-start justify-center gap-8'>
           <h2 className='self-center text-center text-3xl font-bold'>
             {mealData?.name}
