@@ -20,8 +20,8 @@ export const MealCard = ({ mealData, showModal }: MealCardProps) => (
         width={500}
       />
     </figure>
-    <div className='card-body'>
-      <h2 className='card-title'>{mealData.name}</h2>
+    <div className='card-body gap-5'>
+      <h2 className='card-title text-left'>{mealData.name}</h2>
       <div className='flex h-auto gap-1'>
         <span className='badge badge-secondary badge-sm'>
           {mealData.category}
