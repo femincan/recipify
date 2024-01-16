@@ -16,7 +16,7 @@ const getMealsByQuery = async (searchQuery: string, signal: AbortSignal) => {
     return data.meals.map((meal) => normalizeMealData(meal));
   }
 
-  return undefined;
+  return null;
 };
 
 export const useMeal = (searchQuery: string) => {

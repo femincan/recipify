@@ -1,10 +1,10 @@
 import { useRef, useState } from 'react';
-import { Error } from '@src/components/Error';
 import { MealData } from '@src/index.types';
+import { Error } from './Error';
 import { MealCard } from './MealCard';
 import { MealModal } from './MealModal';
 
-type MealListProps = { meals: MealData[] | undefined };
+type MealListProps = { meals: MealData[] | null };
 
 export const MealList = ({ meals }: MealListProps) => {
   const [currentMeal, setCurrentMeal] = useState<MealData | null>(null);
